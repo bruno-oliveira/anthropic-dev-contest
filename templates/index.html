@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalLens</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 70%;
+            width: 100%;
+        }
+        #controls {
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        #search-input {
+            width: 70%;
+            padding: 5px;
+        }
+        #search-button {
+            padding: 5px 10px;
+        }
+        #results-container {
+            padding: 10px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<div id="controls">
+    <input type="text" id="search-input" placeholder="Search or ask a question...">
+    <button id="search-button">Search</button>
+</div>
+<div id="results-container"></div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script><script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
